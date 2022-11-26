@@ -3,9 +3,10 @@ import Product from "./models/product.js";
 
 const DefaultData = async () => {
   try {
-    //await Product.deleteMany({});
+    await Product.deleteMany({});
     await Product.insertMany(products);
-    console.log("data import");
+    //Product.insertMany(products);
+    console.log("data import sucessfully");
   } catch (err) {
     console.log(err);
   }
